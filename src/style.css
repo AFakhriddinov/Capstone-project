@@ -27,7 +27,7 @@ h1 {
 .fa {
   font-size: 24px;
   color: blue;
-  color: pointer;
+  cursor: pointer;
 }
 
 .likes {

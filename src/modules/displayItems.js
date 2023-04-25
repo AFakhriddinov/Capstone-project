@@ -1,3 +1,10 @@
+var count = 0;
+function addLike(likeID, likeCount) {
+  count++;
+
+  console.log(count);
+}
+
 const items = document.querySelector("#items");
 const url = "https://api.tvmaze.com/shows";
 export default async () => {
@@ -12,7 +19,7 @@ export default async () => {
             <img src="${data.image.medium}"/>
             <div class="h1AndIcon">
                 <h1>${data.name}</h1>
-                <i class="fa">&#xf087;</i>
+                <i id="item${data.id}" class="fa icons">&#xf087;</i>
             </div>
             <p class="likes">5 likes</p>
             <div class="buttons">
