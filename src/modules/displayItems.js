@@ -5,21 +5,18 @@ export default async () => {
     const response = await fetch(url);
     const itemData = await response.json();
     itemData.forEach((data) => {
-      if (data.id <= 3) {
-        items.innerHTML += `
-        <div>    
-        <div>
-                <img src="${data.image.medium}"/>
-                <h1>${data.name}</h1> <i class="fa">&#xf087;</i>
+      items.innerHTML +=
+        data.id <= 6
+          ? `
+        <div class="row">
+            <img src="${data.image.medium}"/>
+            <div class="h1AndIcon">
+                <h1>${data.name}</h1>
+                <i class="fa">&#xf087;</i>
             </div>
-            </div>`;
-      } else if (data.id >= 3 && data.id <= 6) {
-        items.innerHTML += `
-            <div>
-                <img src="${data.image.medium}"/>
-                <h1>${data.name}</h1> <i class="fa">&#xf087;</i>
-            </div>`;
-      }
+            <p>5 likes</p>
+        </div>`
+          : "";
     });
   } catch (error) {
     throw new Error("Data could not be fetched");

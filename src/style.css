@@ -1,10 +1,29 @@
-.fa {
-  font-size: 24px;
-}
-
 body {
   background-color: whitesmoke;
 }
+
 #items {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 70%;
+  margin: auto;
+}
+
+.row {
+  margin: auto;
+}
+
+.h1AndIcon {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h1 {
+  color: rgb(22, 20, 20);
+}
+
+.fa {
+  font-size: 24px;
+  color: blue;
 }
