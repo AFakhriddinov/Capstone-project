@@ -11,6 +11,7 @@ body {
 
 .row {
   margin: auto;
+  margin-top: 40px;
 }
 
 .h1AndIcon {
@@ -26,4 +27,32 @@ h1 {
 .fa {
   font-size: 24px;
   color: blue;
+  color: pointer;
+}
+
+.likes {
+  text-align: right;
+  margin-top: 0;
+  font-size: larger;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.button {
+  height: 35px;
+  width: 150px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 50px;
+  border-top: thin solid black;
+}
+
+footer h3 {
+  padding: 20px;
+  padding-left: 100px;
 }

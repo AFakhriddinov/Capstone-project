@@ -14,7 +14,12 @@ export default async () => {
                 <h1>${data.name}</h1>
                 <i class="fa">&#xf087;</i>
             </div>
-            <p>5 likes</p>
+            <p class="likes">5 likes</p>
+            <div class="buttons">
+                <button type="submit" class="comment button">Comments</button>
+                <br>
+                <button type="submit" class="reserve button">Reservations</button>
+            </div>
         </div>`
           : "";
     });
