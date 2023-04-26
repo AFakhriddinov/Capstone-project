@@ -116,27 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/displayItems.js */ \"./src/modules/displayItems.js\");\n/* harmony import */ var _modules_addNewLike_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/addNewLike.js */ \"./src/modules/addNewLike.js\");\n\r\n\r\n\r\n\r\nwindow.addEventListener(\"load\", (event) => {\r\n  (0,_modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n  (0,_modules_addNewLike_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n});\r\n\n\n//# sourceURL=webpack://capstone-project/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/modules/addNewLike.js":
-/*!***********************************!*\
-  !*** ./src/modules/addNewLike.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst involvementApiUrl =\r\n  \"https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/\";\r\nconst involvementApiKey = \"DQ1WY7tbkUIhRnRaIdyZ\";\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async () => {\r\n  const likeCounterAPI = await fetch(\r\n    `${involvementApiUrl}${involvementApiKey}/likes/`\r\n  )\r\n    .then((response) => response.json())\r\n    .then((data) => data);\r\n\r\n  const likesCounter = items.querySelectorAll(\".likesCount\");\r\n  likesCounter.forEach((likeCounter) => {\r\n    const likesId = likeCounter.getAttribute(\"data-id\");\r\n    const element = likeCounter;\r\n    likeCounterAPI.forEach((likeAPI) => {\r\n      if (likesId === likeAPI.item_id) {\r\n        element.innerHTML = likeAPI.likes;\r\n      }\r\n    });\r\n  });\r\n  // To add or Create like when Heart is pressed\r\n  const likesButton = items.querySelectorAll(\".icons\");\r\n  likesButton.forEach((likeButton) => {\r\n    likeButton.addEventListener(\"click\", (e) => {\r\n      // eslint-disable-next-line max-len\r\n      const targetCounter = e.target.nextElementSibling.children[0].innerText;\r\n      // eslint-disable-next-line max-len\r\n      e.target.nextElementSibling.children[0].innerText = +targetCounter + 1;\r\n      fetch(`${involvementApiUrl}${involvementApiKey}/likes/`, {\r\n        method: \"POST\",\r\n        body: JSON.stringify({\r\n          item_id: likeButton.getAttribute(\"data-id\"),\r\n        }),\r\n        headers: {\r\n          \"Content-type\": \"application/json; charset=UTF-8\",\r\n        },\r\n      });\r\n    });\r\n  });\r\n});\r\n\n\n//# sourceURL=webpack://capstone-project/./src/modules/addNewLike.js?");
-
-/***/ }),
-
-/***/ "./src/modules/displayItems.js":
-/*!*************************************!*\
-  !*** ./src/modules/displayItems.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst moviesArray = [];\r\nlet counter = 0;\r\nconst items = document.querySelector(\"#items\");\r\nconst url = \"https://api.tvmaze.com/shows\";\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async () => {\r\n  // try {\r\n  const response = await fetch(url);\r\n  const itemData = await response.json();\r\n  itemData.forEach((data) => {\r\n    items.innerHTML +=\r\n      data.id >= 204 && data.id <= 209\r\n        ? `\r\n        <div class=\"row\">\r\n            <img src=\"${data.image.medium}\"/>\r\n            <h1>${data.name}</h1>\r\n            <i data-id=\"${data.id}\" class=\"fa icons\">&#xf087;</i>\r\n            <div class=\"numOfLikes\">\r\n              <p class=\"likesCount likes\" data-id=\"${data.id}\">0</p>\r\n              <p class=\"likes\">likes</p>\r\n            </div>\r\n            <div class=\"buttons\">\r\n                <button type=\"submit\" class=\"comment button\">Comments</button>\r\n                <br>\r\n                <button type=\"submit\" class=\"reserve button\">Reservations</button>\r\n            </div>\r\n        </div>`\r\n        : \"\";\r\n  });\r\n  // } catch (error) {\r\n  //   throw new Error(\"Data could not be fetched\");\r\n  // }\r\n});\r\n\n\n//# sourceURL=webpack://capstone-project/./src/modules/displayItems.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n// import listItems from './modules/displayItems.js';\n// import addLike from './modules/addNewLike.js';\n\n// window.addEventListener('load', (event) => {\n//   listItems();\n//   addLike();\n// });\n\n\n//# sourceURL=webpack://capstone-project/./src/index.js?");
 
 /***/ })
 
