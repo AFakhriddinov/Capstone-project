@@ -1,0 +1,54 @@
+body {
+  background-color: whitesmoke;
+}
+
+#items {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 70%;
+  margin: auto;
+}
+
+.row {
+  margin: auto;
+  margin-top: 40px;
+}
+
+h1 {
+  color: rgb(22, 20, 20);
+  text-align: center;
+}
+
+.numOfLikes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa {
+  font-size: 24px;
+  color: blue;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.likesCount {
+  font-weight: bold;
+}
+
+.likes {
+  font-size: larger;
+  padding: 5px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.button {
+  height: 35px;
+  width: 150px;
+  margin: 10px;
+  cursor: pointer;
+}
