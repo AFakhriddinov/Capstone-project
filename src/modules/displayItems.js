@@ -1,12 +1,12 @@
-const items = document.querySelector("#items");
-const url = "https://api.tvmaze.com/shows";
+const items = document.querySelector('#items');
+const url = 'https://api.tvmaze.com/shows';
 
 export default async () => {
   const response = await fetch(url);
   const itemData = await response.json();
   itemData.forEach((data) => {
-    items.innerHTML +=
-      data.id >= 204 && data.id <= 209
+    items.innerHTML
+      += data.id >= 204 && data.id <= 209
         ? `
         <div class="row">
             <img src="${data.image.medium}"/>
@@ -22,6 +22,6 @@ export default async () => {
                 <button type="submit" class="reserve button">Reservations</button>
             </div>
         </div>`
-        : "";
+        : '';
   });
 };
