@@ -14,26 +14,32 @@ body {
   margin-top: 40px;
 }
 
-.h1AndIcon {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 h1 {
   color: rgb(22, 20, 20);
+  text-align: center;
+}
+
+.numOfLikes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fa {
   font-size: 24px;
   color: blue;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.likesCount {
+  font-weight: bold;
 }
 
 .likes {
-  text-align: right;
-  margin-top: 0;
   font-size: larger;
+  padding: 5px;
 }
 
 .buttons {
