@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.restaurant-header{
+    display: flex;
+    list-style: none;
+} 
+
+.fa-arrow-left {
+    margin: 14px;
+}
+
+.fa-arrow-right {
+    margin: 14px;
+}
+
+.fa-xmark {
+    margin: 14px;
+}
+
+.fa-house {
+    margin: 14px;
+}
+
+.fa-magnifying-glass {
+    margin: 14px;
+}
