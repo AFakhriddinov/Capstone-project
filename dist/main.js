@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/displayItems.js */ \"./src/modules/displayItems.js\");\n\n\n\nwindow.addEventListener('load', (event) => {\n  (0,_modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n});\n\n\n//# sourceURL=webpack://capstone-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/displayItems.js */ \"./src/modules/displayItems.js\");\n/* harmony import */ var _modules_addLikes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/addLikes.js */ \"./src/modules/addLikes.js\");\n\n\n\n\nwindow.addEventListener('load', (event) => {\n  (0,_modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  (0,_modules_addLikes_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n});\n\n\n//# sourceURL=webpack://capstone-project/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/addLikes.js":
+/*!*********************************!*\
+  !*** ./src/modules/addLikes.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';\nconst involvementApiKey = 'DQ1WY7tbkUIhRnRaIdyZ';\nconst items = document.querySelector('#items');\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async () => {\n  const likeCounterAPI = await fetch(\n    `${involvementApiUrl}${involvementApiKey}/likes/`,\n  )\n    .then((response) => response.json())\n    .then((data) => data);\n\n  const likesCounter = items.querySelectorAll('.likesCount');\n  likesCounter.forEach((likeCounter) => {\n    const likesId = likeCounter.getAttribute('data-id');\n    const element = likeCounter;\n    likeCounterAPI.forEach((likeAPI) => {\n      if (likesId === likeAPI.item_id) {\n        element.innerHTML = likeAPI.likes;\n      }\n    });\n  });\n  // To add or Create like when Heart is pressed\n  const likesButton = items.querySelectorAll('.icons');\n  likesButton.forEach((likeButton) => {\n    likeButton.addEventListener('click', (e) => {\n      // eslint-disable-next-line max-len\n      const targetCounter = e.target.nextElementSibling.children[0].innerText;\n      // eslint-disable-next-line max-len\n      e.target.nextElementSibling.children[0].innerText = +targetCounter + 1;\n      fetch(`${involvementApiUrl}${involvementApiKey}/likes/`, {\n        method: 'POST',\n        body: JSON.stringify({\n          item_id: likeButton.getAttribute('data-id'),\n        }),\n        headers: {\n          'Content-type': 'application/json; charset=UTF-8',\n        },\n      });\n    });\n  });\n});\n\n\n//# sourceURL=webpack://capstone-project/./src/modules/addLikes.js?");
 
 /***/ }),
 
