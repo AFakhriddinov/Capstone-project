@@ -52,3 +52,15 @@ h1 {
   margin: 10px;
   cursor: pointer;
 }
+
+footer {
+  margin-top: 50px;
+
+  /* border-top: thin solid black; */
+  background-color: lightgray;
+}
+
+footer h3 {
+  padding: 30px;
+  text-align: center;
+}
