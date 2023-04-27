@@ -1,3 +1,4 @@
+export default document.body.innerHTML = `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,9 +9,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Capstone Project</title>
-  <script defer src="main.js"></script></head>
+  </head>
   <body>
-    <h1>Movies<span class="itemCount"></span></h1>
+    <h1>Movies<span class="noOfItems"></span></h1>
 
     <section id="items"></section>
     <footer>
@@ -18,3 +19,5 @@
     </footer>
   </body>
 </html>
+
+`;
