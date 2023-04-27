@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/displayItems.js */ \"./src/modules/displayItems.js\");\n/* harmony import */ var _modules_addLikes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/addLikes.js */ \"./src/modules/addLikes.js\");\n\n\n\n\nwindow.addEventListener('load', (event) => {\n  (0,_modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  (0,_modules_addLikes_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n});\n\n\n//# sourceURL=webpack://capstone-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/displayItems.js */ \"./src/modules/displayItems.js\");\n/* harmony import */ var _modules_addLikes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/addLikes.js */ \"./src/modules/addLikes.js\");\n/* harmony import */ var _modules_countItems_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/countItems.js */ \"./src/modules/countItems.js\");\n\n\n\n\n\nwindow.addEventListener('load', (event) => {\n  (0,_modules_displayItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  (0,_modules_addLikes_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  (0,_modules_countItems_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n});\n\n\n//# sourceURL=webpack://capstone-project/./src/index.js?");
 
 /***/ }),
 
@@ -130,13 +130,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modules/countItems.js":
+/*!***********************************!*\
+  !*** ./src/modules/countItems.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst countItems = async (itemCount, elementHtml) => {\n  if (itemCount === 0 || itemCount === null) {\n    elementHtml.innerHTML = '(0)';\n  } else {\n    elementHtml.innerHTML = ` (${itemCount})`;\n  }\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (countItems);\n\n\n//# sourceURL=webpack://capstone-project/./src/modules/countItems.js?");
+
+/***/ }),
+
 /***/ "./src/modules/displayItems.js":
 /*!*************************************!*\
   !*** ./src/modules/displayItems.js ***!
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst items = document.querySelector('#items');\nconst url = 'https://api.tvmaze.com/shows';\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async () => {\n  const response = await fetch(url);\n  const itemData = await response.json();\n  itemData.forEach((data) => {\n    items.innerHTML\n      += data.id >= 204 && data.id <= 209\n        ? `\n        <div class=\"row\">\n            <img src=\"${data.image.medium}\"/>\n            <h1>${data.name}</h1>\n            <i data-id=\"${data.id}\" class=\"fa icons\">&#xf087;</i>\n            <div class=\"numOfLikes\">\n              <p class=\"likesCount likes\" data-id=\"${data.id}\">0</p>\n              <p class=\"likes\">likes</p>\n            </div>\n            <div class=\"buttons\">\n                <button type=\"submit\" class=\"comment button\">Comments</button>\n                <br>\n                <button type=\"submit\" class=\"reserve button\">Reservations</button>\n            </div>\n        </div>`\n        : '';\n  });\n});\n\n\n//# sourceURL=webpack://capstone-project/./src/modules/displayItems.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _countItems_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countItems.js */ \"./src/modules/countItems.js\");\n\n\nconst items = document.querySelector('#items');\n\nconst url = 'https://api.tvmaze.com/shows';\n\nlet counter = 0;\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (async () => {\n  const response = await fetch(url);\n  const itemData = await response.json();\n\n  itemData.forEach((data) => {\n    if (data.id >= 204 && data.id <= 209) {\n      counter += 1;\n      items.innerHTML += `\n        <div class=\"row\">\n            <img src=\"${data.image.medium}\"/>\n            <h1>${data.name}</h1>\n            <i data-id=\"${data.id}\" class=\"fa icons\">&#xf087;</i>\n            <div class=\"numOfLikes\">\n              <p class=\"likesCount likes\" data-id=\"${data.id}\">0</p>\n              <p class=\"likes\">likes</p>\n            </div>\n            <div class=\"buttons\">\n                <button type=\"submit\" class=\"comment button\">Comments</button>\n                <br>\n                <button type=\"submit\" class=\"reserve button\">Reservations</button>\n            </div>\n        </div>`;\n    }\n  });\n  const itemHtml = document.querySelector('.itemCount');\n  (0,_countItems_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(counter, itemHtml);\n});\n\n\n//# sourceURL=webpack://capstone-project/./src/modules/displayItems.js?");
 
 /***/ })
 
