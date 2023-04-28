@@ -3,7 +3,7 @@ import countItems from './countItems.js';
 const items = document.querySelector('#items');
 
 const url = 'https://api.tvmaze.com/shows';
-
+const moviesArray = [];
 let counter = 0;
 
 export default async () => {
@@ -13,6 +13,7 @@ export default async () => {
   itemData.forEach((data) => {
     if (data.id >= 204 && data.id <= 209) {
       counter += 1;
+      moviesArray.push(data);
       items.innerHTML += `
         <div class="row">
             <img src="${data.image.medium}"/>
@@ -33,3 +34,4 @@ export default async () => {
   const itemHtml = document.querySelector('.itemCount');
   countItems(counter, itemHtml);
 };
+export { moviesArray };
