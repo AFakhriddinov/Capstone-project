@@ -7,11 +7,11 @@ const displayComment = async (ID, cmnt) => {
   let commentsArray = [];
   const commentsData = await result.json();
   const commentsContainer = document.querySelectorAll('.commentsContainer');
-  // const commentsCount = document.querySelectorAll(".commentsCount");
+  const commentsCount = document.querySelectorAll('.commentsCount');
   commentsData.forEach((commentsdatum) => {
     commentsArray += `<p>[${commentsdatum.creation_date}]&nbsp;&nbsp;<span class="commenterName">${commentsdatum.username}</span> : ${commentsdatum.comment}</p>`;
   });
-  // commentsCount[cmnt].innerHTML = commentsData.length;
+  commentsCount[cmnt].innerHTML = commentsData.length;
   commentsContainer[cmnt].innerHTML = commentsArray;
 };
 
@@ -64,7 +64,7 @@ window.setTimeout(() => {
 }, 2000);
 
 const submitComment = async (item1, user1, ID) => {
-  const count = 0;
+  let count = 0;
   // eslint-disable-next-line
     const response = await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DQ1WY7tbkUIhRnRaIdyZ/comments/',
@@ -83,7 +83,7 @@ const submitComment = async (item1, user1, ID) => {
 
   moviesArray.forEach((movie) => {
     displayComment(`"${movie.id}"`, count);
-    // count += 1;
+    count += 1;
   });
 };
 
