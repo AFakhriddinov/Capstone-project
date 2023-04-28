@@ -1,3 +1,12 @@
+
+<a name="readme-top"></a>
+
+<div align="center">
+
+  <h3><b>JavaScript Capstone Project </b></h3>
+
+</div>
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -11,7 +20,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -22,126 +31,157 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Capstone] <a name="about-project"></a>
+# 📖 JavaScript Capstone Project <a name="about-project"></a>
 
+This project was built as a group capstone project with HTML, CSS, and JavaScript. The project is about movie items.
 
-**Capstone** is a project which is to be carried out as a group.
-
-## 🛠 Built With <a name="built-with"></a>
-
-    .module
-    .html
-    .javascript
-    .Webpack
-
+## 🛠 Built With <a name="built-with"></a> 
+- HTML, CSS
+- Git, Github
+- VSCode
 ### Tech Stack <a name="tech-stack"></a>
+> HTML,
+> CSS,
+> Javascript,
+> Git,
+> Github,
+> webpack
+> Jest
+> External APIs
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.w3schools.com/html/">html</a></li>
+    <li><a href="https://www.w3schools.com/css/">css</a></li>
+    <li><a href="https://www.w3schools.com/js/">Js</a></li>
+    <li><a href="https://webpack.js.org/">Webpack</a></li>
+    <li><a href="https://jestjs.io/">Jest</a></li>
+
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="#">No database for time being</a></li>
+  </ul>
+</details>
 
 ### Key Features <a name="key-features"></a>
+> Features I used in this project mainly:
 
-> - **[Linters]**
-  > A linter is a tool that analyzes your source code to flag programming errors, bugs, stylistic errors, and suspicious constructs
-> - **[.gitignore]**
-  > Specifies intentionally untracked files to ignore
-  **[Module]**
-  > links different code bases.
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Linters and Stylelint**
+- **eslint**
+- **Webpack**
+- **Testing**
 
-<!-- GETTING STARTED -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+N/A
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps.
+Clone this repository to your desired folder:
 
+```
+git clone https://github.com/AFakhriddinov/Capstone-project.git
+```
 ### Prerequisites
 
-In order to run this project you need: have basic knowledge of html, css and javascript.
+-NodeJS
+-Browser
 
+In order to run this project you need:
+
+### Setup
+
+Clone this repository to your dist folder:
+
+git clone git clone https://github.com/AFakhriddinov/Capstone-project.git
+
+cd Capstone-project
 ### Install
 
-Install this project with: vscode, eslint, node_js
+Install project dependencies in this project with:
+
+npm install webpack webpack-cli
+npm install html-webpack-plugin
+npm install style-loader css-loader
+npm install webpack-dev-server
+npm install --save-dev jest
 
 ### Usage
-
-- open your local terminal
-- run git clone https://github.com/AFakhriddinov/Capstone-project
-- After Cloning this repo to your local machine
-- Open the `index.html` in your browser
-- Open with Live Server
-
+Use this project in the browsers of desktops
 ### Run tests
-
-To track linter errors locally follow these steps:  
-
-Download all the dependencies run:
-```
-npm install
-```
-Track HTML linter errors run:
-```
-npx hint .
-```
-Track CSS linter errors run:
-```
-npx stylelint "**/*.{css,scss}"
-```
-Track JavaScript linter errors run:
-```
-npx eslint .
-```
+npm test
 ### Deployment
-You can deploy this project using:
-GitHub pages
-
-<!-- AUTHORS -->
+You can deploy this project on GitHub Pages 
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Abdul-Aziz Fakhriddinov**
+- GitHub: [@githubhandle](https://github.com/AFakhriddinov)
+- Twitter: [@facebookhandle](https://www.facebook.com/abdulaziz.faxriddinov)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdul-aziz-fakhriddinov-5297a6107/)
 
 👤 **BADRUNDAWULA**
-
 - GitHub: [@githubhandle](https://github.com/PrinceBadru)
 - Twitter: [@twitterhandle](https://twitter.com/BadruNdawula)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/badru-ndawula-930b7b217/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **I will modify the style.css with more interesting background and styling**
-- [ ] **I will add animation in to javascript code to add some function to buttons**
+
+Add more dynamic features of sending data to user's email
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
+Feel free to check the issues page.
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give a star!
+If you like this project, please let me know and we can improve it further. You are welcome to support this project by giving suggestions for improvement.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank Microverse for giving us a chance to practice on some real world projects and the code reviewers for taking time to do the work. 
+I would like to thank Microverse Community and student Code partiner, Morning Session and standup all .
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+
+- **[How can this project be imporoved]**
+
+  - [Slideshow could be added to this website using JavaScript]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/AFakhriddinov/Capstone-project/blob/development/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
