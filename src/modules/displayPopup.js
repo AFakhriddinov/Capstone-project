@@ -47,4 +47,44 @@ window.setTimeout(() => {
     });
   }
 }, 2000);
+
+const submitComment = async (item1, user1, ID) => {
+  const count = 0;
+  // eslint-disable-next-line
+    const response = await fetch(
+    'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DQ1WY7tbkUIhRnRaIdyZ/comments/',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        item_id: `"${ID}"`,
+        username: item1,
+        comment: user1,
+      }),
+    },
+  );
+
+  // moviesArray.forEach((movie) => {
+  //   displayComment(`"${movie.id}"`, count);
+  //   count += 1;
+  // });
+};
+
+window.setTimeout(() => {
+  const submitBtns = document.querySelectorAll('.submit');
+  submitBtns.forEach((submitBtn) => {
+    submitBtn.addEventListener('click', (e) => {
+      submitComment(
+        // eslint-disable-next-line
+          e.target.previousElementSibling.previousElementSibling
+          .previousElementSibling.previousElementSibling.value,
+        e.target.previousElementSibling.previousElementSibling.value,
+        e.target.nextElementSibling.innerHTML,
+      );
+    });
+  });
+}, 2000);
+
 export default popup;
