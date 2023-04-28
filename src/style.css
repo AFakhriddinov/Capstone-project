@@ -1,0 +1,186 @@
+body {
+  background-color: whitesmoke;
+}
+
+#items {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 70%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.row {
+  margin: auto;
+  margin-top: 40px;
+}
+
+h1 {
+  color: rgb(22, 20, 20);
+  text-align: center;
+}
+
+.numOfLikes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa {
+  font-size: 24px;
+  color: blue;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.likesCount {
+  font-weight: bold;
+}
+
+.likes {
+  font-size: larger;
+  padding: 5px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.button {
+  height: 35px;
+  width: 150px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+  background-color: rgb(216, 214, 214);
+}
+
+footer {
+  margin-top: 50px;
+  background-color: lightgray;
+}
+
+footer h3 {
+  padding: 30px;
+  text-align: center;
+}
+
+.page-header {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.movies-header {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: large;
+}
+
+.popup {
+  overflow: scroll;
+  overflow-x: hidden;
+  display: none;
+  flex-direction: column;
+  background: rgb(219, 216, 216);
+  width: 900px;
+  height: 650px;
+  position: fixed;
+  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  width: 30px;
+  margin-left: auto;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.popImg {
+  border-radius: 5px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+}
+
+.name,
+.genres {
+  margin-top: 5px;
+  text-align: center;
+  color: rgb(0, 55, 55);
+}
+
+.bold {
+  font-weight: bolder;
+  font-size: 20px;
+  color: rgb(0, 0, 78);
+}
+
+.summary {
+  width: 70%;
+  margin: auto;
+}
+
+.commentContainer {
+  font-weight: 1000;
+  font-size: large;
+  margin: auto;
+}
+
+.commentsContainer {
+  margin: auto;
+  margin-top: 7px;
+}
+
+.flexForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+  width: 200px;
+  height: 25px;
+  margin-top: 10px;
+  font-size: 17px;
+  border-radius: 2px;
+  border: none;
+}
+
+.message {
+  padding-bottom: 105px;
+  width: 200px;
+  border-radius: 2px;
+  border: none;
+  font-size: 17px;
+}
+
+.submit {
+  width: 100px;
+  height: 27px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  color: white;
+  background-color: green;
+  margin-top: 10px;
+}
+
+.movieId {
+  visibility: hidden;
+}
+
+.userComment {
+  margin-left: 10px;
+}
+
+.commenterName {
+  font-weight: bold;
+}
