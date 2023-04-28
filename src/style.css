@@ -75,3 +75,109 @@ footer h3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: large;
 }
+
+.popup {
+  overflow: scroll;
+  overflow-x: hidden;
+  display: none;
+  flex-direction: column;
+  background: rgb(219, 216, 216);
+  width: 900px;
+  height: 650px;
+  position: fixed;
+  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  width: 30px;
+  margin-left: auto;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.popImg {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+}
+
+.name,
+.genres {
+  margin-top: 5px;
+  text-align: center;
+  color: rgb(0, 55, 55);
+}
+
+.bold {
+  font-weight: bolder;
+  font-size: 20px;
+  color: rgb(0, 0, 78);
+}
+
+.summary {
+  width: 70%;
+  margin: auto;
+}
+
+.commentContainer {
+  font-weight: 1000;
+  font-size: large;
+  margin: auto;
+}
+
+.commentsContainer {
+  margin: auto;
+  margin-top: 7px;
+}
+
+.flexForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+  width: 200px;
+  height: 25px;
+  margin-top: 10px;
+  font-size: 17px;
+  border-radius: 2px;
+  border: none;
+}
+
+.message {
+  padding-bottom: 105px;
+  width: 200px;
+  border-radius: 2px;
+  border: none;
+  font-size: 17px;
+}
+
+.submit {
+  width: 100px;
+  height: 27px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  color: white;
+  background-color: green;
+  margin-top: 10px;
+}
+
+.movieId {
+  visibility: hidden;
+}
+
+.userComment {
+  margin-left: 10px;
+}
+
+.commenterName {
+  font-weight: bold;
+}

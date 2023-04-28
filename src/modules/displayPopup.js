@@ -1,5 +1,20 @@
 import { moviesArray } from './displayItems.js';
 
+const displayComment = async (ID, cmnt) => {
+  const result = await fetch(
+    `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DQ1WY7tbkUIhRnRaIdyZ/comments?item_id=${ID}`,
+  );
+  let commentsArray = [];
+  const commentsData = await result.json();
+  const commentsContainer = document.querySelectorAll('.commentsContainer');
+  // const commentsCount = document.querySelectorAll(".commentsCount");
+  commentsData.forEach((commentsdatum) => {
+    commentsArray += `<p>[${commentsdatum.creation_date}]&nbsp;&nbsp;<span class="commenterName">${commentsdatum.username}</span> : ${commentsdatum.comment}</p>`;
+  });
+  // commentsCount[cmnt].innerHTML = commentsData.length;
+  commentsContainer[cmnt].innerHTML = commentsArray;
+};
+
 const popup = async () => {
   const body = document.querySelector('body');
   const popupElement = document.createElement('div');
@@ -30,7 +45,7 @@ const popup = async () => {
           </form>
       </div>
       `;
-    // displayComment(`"${movie.id}"`, county);
+    displayComment(`"${movie.id}"`, county);
 
     county += 1;
     popupElement.innerHTML += moviePopup;
@@ -66,10 +81,10 @@ const submitComment = async (item1, user1, ID) => {
     },
   );
 
-  // moviesArray.forEach((movie) => {
-  //   displayComment(`"${movie.id}"`, count);
-  //   count += 1;
-  // });
+  moviesArray.forEach((movie) => {
+    displayComment(`"${movie.id}"`, count);
+    // count += 1;
+  });
 };
 
 window.setTimeout(() => {
