@@ -33,7 +33,7 @@
 
 # 📖 JavaScript Capstone Project <a name="about-project"></a>
 
-This project was built as a group capstone project with HTML, CSS, and JavaScript. The project is about movie items.
+This project was built as a group capstone project with HTML, CSS, and JavaScript. The project is about movie items. For a detailed description of the project visit this [link](https://drive.google.com/file/d/14PaU6iHXjjZoYY8YJtac8seiY8dlAB9W/view?usp=share_link) to watch a demo video
 
 ## 🛠 Built With <a name="built-with"></a> 
 - HTML, CSS
@@ -73,15 +73,15 @@ This project was built as a group capstone project with HTML, CSS, and JavaScrip
 </details>
 
 ### Key Features <a name="key-features"></a>
-> Features I used in this project mainly:
-
-- **HTML**
-- **CSS**
-- **JavaScript**
-- **Linters and Stylelint**
-- **eslint**
-- **Webpack**
-- **Testing**
+> Movie items are fetched from API
+> Items counter feature that counts number of items on the home page
+> Like button to like the item
+> Number of likes for a specific item is displayed
+> Popup comment section. Upon click of comment button, popup window appears with item details and comment form
+> Comments can be submitted with user's name and comment.
+> Submitted comments are displayed with created date on the page.
+> Comment count is displayed on the page
+> Counte functions for items and comments are tested with Jest Framework unit testing
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
